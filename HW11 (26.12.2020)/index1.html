@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            height: 30px; 
+            width: 600px; 
+            border: 1px solid black; 
+            border-radius: .25rem;
+            padding: 20px 20px 10px;
+            margin-bottom: 1rem;
+            font-family: Verdana, sans-serif;
+            font-size: 16px;
+            
+        }
+    </style>
+</head>
+<body>
+   <button id = "infoBtn">click me for info msg</button>
+   <button id = "successBtn">click me for success msg</button>
+   <button id = "warningBtn">click me for warning msg</button>
+   <button id = "dangerBtn">click me for danger msg</button>
+    
+  
+      
+      <script>
+          
+          
+          let infoBtn = document.querySelector("#infoBtn");
+          infoBtn.bgColor = "#d1ecf1";
+          infoBtn.color = "#0c5460";
+          infoBtn.borderColor = "#b8daff";
+          infoBtn.message = "This is an info message";
+          infoBtn.addEventListener('click', function(event) {
+              showMessage(infoBtn.bgColor, infoBtn.color, infoBtn.borderColor, infoBtn.message);
+          });
+          
+          let successBtn = document.querySelector("#successBtn");
+          successBtn.bgColor = "#d4edda";
+          successBtn.color = "#155724";
+          successBtn.borderColor= "#b8daff";
+          successBtn.message = "This is a success message"
+          successBtn.addEventListener('click', function(event) {
+              showMessage(successBtn.bgColor, successBtn.color, successBtn.borderColor, successBtn.message);
+          });
+          
+          let warningBtn = document.querySelector("#warningBtn");
+          warningBtn.bgColor = "#fff3cd";
+          warningBtn.color = "#856404";
+          warningBtn.borderColor = "#ffeeba";
+          warningBtn.message = "This is a warning message";
+          warningBtn.addEventListener('click', function(event) {
+              showMessage(warningBtn.bgColor, warningBtn.color, warningBtn.borderColor, warningBtn.message);
+          });
+          
+          let dangerBtn = document.querySelector("#dangerBtn");
+          dangerBtn.bgColor = "#f8d7da";
+          dangerBtn.color = "#721c24";
+          dangerBtn.borderColor = "#f5c6cb";
+          dangerBtn.message = "This is a danger message";
+          dangerBtn.addEventListener('click', function(event) {
+              showMessage(dangerBtn.bgColor, dangerBtn.color, dangerBtn.borderColor, dangerBtn.message);
+          });
+          
+          
+          function showMessage(bgColor, color, borderColor, message){
+              let div = document.createElement("div");
+              document.body.append(div);
+              div.style.cssText = "background-color: " + bgColor + "; color:" + color + "; border-color:" + borderColor;
+              div.innerText = message;
+          }
+          
+          
+          
+          
+          
+          
+          
+          
+//        let button = document.querySelector("button");
+//        let successBtn = document.querySelector("#successBtn");
+//        successBtn.addEventListener('click', newAlert);
+//        successBtn.alertType = 'success';
+//        
+//        let warningBtn = document.querySelector("#warningBtn");
+//        warningBtn.addEventListener('click', newAlert);
+//        warningBtn.alertType = 'warning';
+//        
+//        function newAlert(alertType) {
+//            let div = document.createElement("div");
+//            div.className = "alert";
+//            document.body.append(div);
+//            let message;
+//            if(button.alertType == "info"){
+//                div.style.cssText = "background-color: #d1ecf1; color: #0c5460; border: 1px solid #b8daff;"
+//                message = "This is an info message"
+//            } else if(button.alertType == "success") {
+//                div.style.cssText = "background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;"
+//                message = "This is a success message"
+//            } else if(button.alertType == "warning"){
+//                div.style.cssText = "background-color: #fff3cd; color: #856404; border: 1px solid #ffeeba;"
+//                message = "This is a warning message"
+//            } else if (button.alertType == "danger"){
+//                div.style.cssText = "background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb;"
+//                message = "This is a danger message"
+//            }
+//            div.innerText = message;
+//        }
+        
+        
+        
+//        let infoBtn = document.querySelector("#infoBtn");
+//        infoBtn.addEventListener('click', myFunc, false);
+//        infoBtn.alertType = 'danger';
+//        function myFunc(evt){
+//            
+//            window.alert(evt.currentTarget.alertType);
+//        }
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>
