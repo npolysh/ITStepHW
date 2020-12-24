@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        
+        //task1
+//        let year = +prompt("enter year");
+//        
+//        let isYearLeap = (year) => {
+//            if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)){
+//                return true;
+//            } else return false;
+//        }
+//        alert(isYearLeap(year));
+        
+        
+        //task2
+//        let a = prompt("enter 1st side");
+//        let b = prompt("enter 2nd side");
+//        
+//        let rectangle = (a,b) => {
+//            return a*b;
+//        }
+//        
+//        alert("s = " + rectangle(a,b));
+        
+        
+        //task3
+//        let month = +prompt("enter month's num (1-12)")
+//        let season = (month) => {
+//            switch(month){
+//                case 12: 
+//                case 1: 
+//                case 2: 
+//                    return "winter";
+//                    break;
+//                case 3: 
+//                case 4: 
+//                case 5:
+//                    return "spring";
+//                    break;
+//                case 6: 
+//                case 7: 
+//                case 8:
+//                    return "summer";
+//                    break;
+//                case 9: 
+//                case 10: 
+//                case 11: 
+//                    return "autumn";
+//                    break;
+//                default: return "invalid month";
+//                    break;
+//            }
+//        }
+//        console.log(season(month));
+        
+        
+        //task4
+//        let a = +prompt("enter money");
+//        let years = +prompt("enter num of years");
+//        
+//        let bank = (a, years) => {
+//            for (let i = 0; i < years; i++){
+//                a += a * 0.1;
+//            }
+//            console.log(a);
+//        }
+//        bank(a,years);
+        
+        
+        //task5
+//        let num = +prompt("vvedite ch");
+//        
+//        let isPrime = num => {
+//            for(let i = 2; i <= Math.sqrt(num); i++)
+//                if(num % i === 0) return false; 
+//            return num > 1;
+//        }
+//
+//        alert(isPrime(num));
+        
+        
+        //task6
+        let day = +prompt("enter day");
+        let month = +prompt("enter month");
+        let year = +prompt("enter year");
+        
+        let date = (day, month, year) => {
+            let maxdays;
+            switch(month){
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                    maxdays = 31;
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    maxdays = 30;
+                case 2: 
+                    if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) maxdays = 29; else maxdays = 28;
+            }
+            
+            
+            if (day <= maxdays) return true
+            else return false;
+        }
+        
+        console.log(date(day, month, year));
+        
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

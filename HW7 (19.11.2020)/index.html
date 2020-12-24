@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+    
+        let a;
+        let b;
+        
+        let numsEnter = () => {
+            while(true){
+                a = +prompt("Enter first num");
+                if (!Number.isInteger(a)){
+                    alert("First input is not a number");
+                    break;
+                }
+                
+                b = +prompt("Enter second num");
+                if (!Number.isInteger(b)){
+                    alert("Second input is not a number");
+                    break;
+                }
+                
+                compare(a,b);
+            }
+        };
+        
+        let compare = (a,b) => {
+            if (a < b) alert("First number less")
+            else if (b < a) alert("Second number less")
+            else alert("nums are equal")
+        }
+        
+        numsEnter();
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

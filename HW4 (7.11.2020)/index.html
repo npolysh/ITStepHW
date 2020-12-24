@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        
+        //task1
+//        let check = function(test){
+//            switch(test){
+//            case true : alert("Неверно");
+//                break;
+//            default: alert("Верно");
+//            }    
+//        }
+//        let test = true;
+//        check(test);
+//        
+//        test = false;
+//        check(test);
+        
+        
+        //task2
+//        let a = prompt("vvedite chyslo");
+//        let first = Math.floor(a / Math.pow(10, (a.length - 1)));
+//        
+//        switch(first){
+//            case 1: 
+//            case 2: 
+//            case 3:
+//                alert("да");
+//                break;
+//            default:
+//                alert("нет");
+//        }
+        
+        //task3
+        
+        let a = prompt("vvedite 6-znachnoe chyslo");
+        let sum1 = 0;
+        let sum2 = 0;
+        let b;
+        if(a < 100000 || a > 999999){
+            alert("chyslo vvedeno neverno");
+        } else {
+            while(a){
+                let tmp = a % 10;
+                a = (a - tmp) / 10;
+                sum1 += tmp;
+                if (a < 1000) break;
+            }
+            b = a;
+            while (b){
+                let tmp = b % 10;
+                b = (b - tmp) / 10;
+                sum2 +=tmp;
+            }
+
+            switch(sum1){
+                case sum2: alert("да");
+                    break;
+                default: alert("нет");
+            }
+        }
+        console.log(sum1);
+        console.log(sum2);
+        
+        
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
