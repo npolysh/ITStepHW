@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <script>
+        
+        //шифрование строки/числа через числовые значения юникода 
+        function encrypt(str){
+            let arr = Array.from(String(str));
+            let newArr = [];
+            arr.forEach((item, index, arr) => {
+                arr[index].charCodeAt(0) == 32 ? item = 32 : item = arr[index].charCodeAt(0) + 3;
+                newArr.push(String.fromCharCode(item));
+            });
+            return{
+                "old string": str,
+                "new string": newArr.join("")
+            }
+        };
+        
+        console.log(encrypt("123 456"));
+        console.log(encrypt("abcde"));
+        console.log(encrypt("my string"));
+        console.log(encrypt("MY STRING"));
+        
+        
+        function decrypt(str){
+            let arr = Array.from(String(str));
+            let newArr = [];
+            arr.forEach((item, index, arr) => {
+                arr[index].charCodeAt(0) == 32 ? item = 32 : item = arr[index].charCodeAt(0) - 3;
+                newArr.push(String.fromCharCode(item));
+            });
+            return{
+                "old string": str,
+                "new string": newArr.join("")
+            }
+        }
+        
+        console.log(decrypt("456 789"));
+        console.log(decrypt("defgh"));
+        console.log(decrypt("p| vwulqj"));
+        
+        
+        
+        
+        //шифрование числа по цифрам от 0 до 9 с шагом 3
+        //если нужно задать шаг, добавляем аргумент step, заменяем им все 3 в forEach
+        function encrypt(str){
+            let arr = Array.from(String(str));
+            let newArr = [];
+            arr.forEach(item =>{
+                item = +item + 3 > 9 ? (+item + 3 - 10) : (+item + 3);
+                newArr.push(item);
+            });
+            return{
+                "old string": str,
+                "new string": newArr.join("")
+            };
+        };
+        
+        console.log(encrypt("789"));
+        console.log(encrypt(123));
+        
+        
+        function decrypt(str){
+            let arr = Array.from(String(str));
+            let newArr = [];
+            arr.forEach(item =>{
+                item = +item - 3 < 0 ? (+item - 3 + 10) : (+item - 3);
+                newArr.push(item);
+            });
+            return{
+                "old string": str,
+                "new string": newArr.join("")
+            };
+        };
+        console.log(decrypt("012"));
+        console.log(decrypt(456));
+        
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
