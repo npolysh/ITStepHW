@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        
+        //task1
+        function isPalindrome(str){
+            return str == str.split("").reverse().join("");
+        }
+
+        console.log(isPalindrome("string gnirts"));
+        console.log(isPalindrome("string"));
+        
+
+        
+        
+        
+        //task2
+        function numParser(str){
+            let sum =  0;
+            str = prompt("enter stirng (f.e. $123 or 123$)");
+            str.split("").forEach(item => !isNaN(parseInt(item))  ? sum += parseInt(item) : sum += 0);
+            return sum;
+        } 
+        console.log("sum = " + numParser());
+
+
+
+        
+        
+        //task3
+        function zeros(num, length, sign){
+            let arr = Array.from(String(num));
+            let counter = length - arr.length;
+            for(let i = 0; i < counter; i++ ){
+                arr.unshift("0");
+            }
+            arr.unshift(sign);
+            return arr.join("");
+        }
+        console.log(zeros(145, 5, '-'));
+        console.log(zeros(33, 4, '+'));
+        console.log(zeros(33, 4));
+        
+        
+        //параметры от юзера: 
+        function zeros(num, length, sign){
+            num = +prompt("num");
+            length = prompt("length");
+            sign = prompt("sign (+ or -): ");
+            
+            let arr = Array.from(String(num));
+            let counter = length - arr.length;
+            
+            for(let i = 0; i < counter; i++ ){
+                arr.unshift("0");
+            }
+            arr.unshift(sign);
+            console.log(arr.join(""));
+        }
+        zeros();
+              
+        
+        
+        
+        
+        //task 4
+        //2 аргумента
+        function comparison(str1, str2){
+            if (str1.toLowerCase() === str2.toLowerCase()) return true;
+            else return false;
+        }
+        console.log(comparison('string', 'StRiNg' )); // true
+        console.log(comparison('ABCDe', 'AbcdW'));   // false
+        
+        
+        //неограниченное к-ство аргументов
+        function comparison(){
+            return [...arguments].every((item, index, arr) => arr[0].toLowerCase() === arr[index].toLowerCase()) ? true : false;            
+        }
+        console.log(comparison('string', 'StRiNg', 'StRiNG')); 
+        console.log(comparison('ABCDe', 'AbcdW'));; 
+        
+        
+        
+        
+//        function comparison(){
+//            console.log([...arguments]);
+//            console.log([...arguments].length);
+//            
+//            [...arguments].forEach((item, index, arr) => console.log(`elem 0: ${arr[0]}, elem ${index}: ${arr[index]}`));
+//            
+//            console.log(arguments[0] === arguments[1].toLowerCase());
+//            
+//            [...arguments].forEach((item, index, arr) => console.log(`elem 0: ${arr[0].toLowerCase()}, elem ${index}: ${arr[index].toLowerCase()}`));
+//            
+//            return [...arguments].forEach((item, index, arr) => arr[0].toLowerCase() === arr[index].toLowerCase()) ? true : false; 
+//        }
+//        console.log(comparison("string", "StRiNg"));
+//        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
