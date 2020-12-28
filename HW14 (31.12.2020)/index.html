@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <script>
+        window.onload = function(){
+            let input = document.createElement('input');
+            let button = document.createElement('button');
+            button.textContent = "click me";
+            document.body.append(input);
+            document.body.append(button);
+            
+            input.addEventListener('change', () => {
+                let value = this.value;
+            });
+            
+            button.addEventListener('click', () => {
+                let div = document.createElement('div');
+                div.textContent = input.value;
+                div.style.backgroundColor = `rgba(${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)}, ${Math.random()})`;
+                div.style.animation = `showMessage 0.6s linear 1`;
+                document.body.append(div);
+            });
+        };
+                
+    </script>
+</body>
+</html>
