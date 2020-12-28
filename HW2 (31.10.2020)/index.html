@@ -7,147 +7,147 @@
     <script>
         //task 1
         
-//        let a = prompt("enter your age");
-//        
-//        if (a >= 0 && a < 12){
-//            alert("rebenok");
-//        } else if (a >=12 && a < 18){
-//            alert("podrostok");
-//        }else if (a >= 18 && a < 60){
-//            alert("vroslyi");
-//        }else if (a >=60){
-//            alert("pensioner");
-//        }else alert("tebya ne sushchestvuet");
+        let a = prompt("enter your age");
+        
+        if (a >= 0 && a < 12){
+            alert("rebenok");
+        } else if (a >=12 && a < 18){
+            alert("podrostok");
+        }else if (a >= 18 && a < 60){
+            alert("vroslyi");
+        }else if (a >=60){
+            alert("pensioner");
+        }else alert("tebya ne sushchestvuet");
         
         
         //task 2
-//        let a = prompt("vvedite chyslo ot 1 do 9");
-//        
-//        switch(Number(a)){
-//            case 1: alert("!");
-//                break;
-//            case 2: alert("@");
-//                break;
-//            case 3: alert("#");
-//                break;
-//            case 4: alert("$");
-//                break;
-//            case 5: alert("%");
-//                break;
-//            case 6: alert("^");
-//                break;
-//            case 7: alert("&");
-//                break;
-//            case 8: alert("*");
-//                break;
-//            case 9: alert("(");
-//                break;
-//            case 0: alert(")");
-//                break;
-//            default: alert("ot 0 do 9 eale!!!");
-//                break;
-//        }
+        let a = prompt("vvedite chyslo ot 1 do 9");
+        
+        switch(Number(a)){
+            case 1: alert("!");
+                break;
+            case 2: alert("@");
+                break;
+            case 3: alert("#");
+                break;
+            case 4: alert("$");
+                break;
+            case 5: alert("%");
+                break;
+            case 6: alert("^");
+                break;
+            case 7: alert("&");
+                break;
+            case 8: alert("*");
+                break;
+            case 9: alert("(");
+                break;
+            case 0: alert(")");
+                break;
+            default: alert("ot 0 do 9 eale!!!");
+                break;
+        }
         
         
         //task 3
-//        let a = prompt("vv 3-znachnoe chislo");
-//        
-//        let first = a % 10;
-//        let second = Math.floor(a % 100 / 10);
-//        let third = Math.floor(a/100);
-//        
-//        if (a >=100 && a < 1000){
-//            if (first == second || first == third || second == third || first == second == third){
-//                alert("odinakoviye tcyfri est`");
-//            }else alert("odinakovih tcyfr net");
-//        }else alert("ty vvel ne 3zhachnoe chislo");
+        let a = prompt("vv 3-znachnoe chislo");
+        
+        let first = a % 10;
+        let second = Math.floor(a % 100 / 10);
+        let third = Math.floor(a/100);
+        
+        if (a >=100 && a < 1000){
+            if (first == second || first == third || second == third || first == second == third){
+                alert("odinakoviye tcyfri est`");
+            }else alert("odinakovih tcyfr net");
+        }else alert("ty vvel ne 3zhachnoe chislo");
         
         
         //task 4
         
-//        let year = prompt("enter year: ");
-//        
-//        if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)){                    alert("vysokosnyi");
-//        } else alert("nevysokosnyi");
+        let year = prompt("enter year: ");
+        
+        if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) alert("vysokosnyi");
+        else alert("nevysokosnyi");
         
         
         //task 5
         
-//        let a = prompt("vvedite 5-znachnoe chislo");
-//        
-//        let first = Math.floor(a / 10000);
-//        let second = Math.floor(a/1000) % 10;
-//        let fourth = Math.floor(a % 100 / 10);
-//        let fifth = a % 10;
-//        
-//        if (a > 9999 && a < 100000){
-//            if (first == fifth && second == fourth){
-//                alert("polindrom");
-//            } else alert("nepolindrom");
-//        } else alert("chyslo ne 5-zhachnoe");
+        let a = prompt("vvedite 5-znachnoe chislo");
+        
+        let first = Math.floor(a / 10000);
+        let second = Math.floor(a/1000) % 10;
+        let fourth = Math.floor(a % 100 / 10);
+        let fifth = a % 10;
+        
+        if (a > 9999 && a < 100000){
+            if (first == fifth && second == fourth){
+                alert("polindrom");
+            } else alert("nepolindrom");
+        } else alert("chyslo ne 5-zhachnoe");
         
         
         //task 6
-//        let a = prompt("vvedite k-stvo USD");
-//        let currency = prompt("vvedite valutu (UAH, EUR, AZN)");
-//        
-//        if (currency === "UAH" || currency === "uah"){
-//            alert (a * 28 + " UAH");
-//        } else if (currency === "EUR" || currency === "eur"){
-//            alert(a * 0.86 + " EUR");
-//        }else if (currency === "AZN" || currency === "azn"){
-//            alert(a * 1.7 + " AZN");
-//        } else alert("valuta nedostupna");
+        let a = prompt("vvedite k-stvo USD");
+        let currency = prompt("vvedite valutu (UAH, EUR, AZN)");
+        
+        if (currency === "UAH" || currency === "uah"){
+            alert (a * 28 + " UAH");
+        } else if (currency === "EUR" || currency === "eur"){
+            alert(a * 0.86 + " EUR");
+        }else if (currency === "AZN" || currency === "azn"){
+            alert(a * 1.7 + " AZN");
+        } else alert("valuta nedostupna");
         
         
         //task 7
         
-//        let sum = prompt("vvedite summu pokupki");
-//        
-//        if (sum >= 200 && sum <= 300){
-//            alert("summa so skidkoy = " + (sum - sum*0.03));
-//        }else if (sum > 300 && sum <= 500){
-//            alert("summa so skidkoy = " + (sum - sum*0.05));
-//        }else if (sum > 500){
-//            alert("summa so skidkoy = " + (sum - sum*0.07));
-//        }else alert("sednya bez skidok");
-//        
+        let sum = prompt("vvedite summu pokupki");
+        
+        if (sum >= 200 && sum <= 300){
+            alert("summa so skidkoy = " + (sum - sum*0.03));
+        }else if (sum > 300 && sum <= 500){
+            alert("summa so skidkoy = " + (sum - sum*0.05));
+        }else if (sum > 500){
+            alert("summa so skidkoy = " + (sum - sum*0.07));
+        }else alert("sednya bez skidok");
+        
         
         //task 8
-//        let po = prompt("vvedite dlinu okruzhnosti");
-//        let pk = prompt("vvedite perimetr kvadrata");
-//        let pi = 3.14;
-//        let d = po / pi;
-//        let a = pk / 4;
-//        if (d <= a){
-//            alert("pomestitsa");
-//        } else alert("nepomestitsa");
-//        
-//        //проверка на вписанный круг 
-//        
-//        if (d == a){
-//            alert("vpisannyi");
-//        } else alert("nevpisannyi");
+        let po = prompt("vvedite dlinu okruzhnosti");
+        let pk = prompt("vvedite perimetr kvadrata");
+        let pi = 3.14;
+        let d = po / pi;
+        let a = pk / 4;
+        if (d <= a){
+            alert("pomestitsa");
+        } else alert("nepomestitsa");
+        
+        //проверка на вписанный круг 
+        
+        if (d == a){
+            alert("vpisannyi");
+        } else alert("nevpisannyi");
         
         
         //task 9
         
-//        let first = prompt("2 + 2 = ? (4, 6, 8)");
-//        let second = prompt ("2 * 6 = ? (10, 12, 18)");
-//        let third = prompt ("10^2 = ? (100, 121, 169)");
-//        let i = 0;
-//        
-//        if (first == 4){
-//            i += 2;
-//        }else i += 0;
-//        
-//        if (second == 12){
-//            i +=2;
-//        } else i += 0;
-//         if (third == 100){
-//             i += 2;
-//         }else i += 0;
-//        alert(i + " ballov");
+        let first = prompt("2 + 2 = ? (4, 6, 8)");
+        let second = prompt ("2 * 6 = ? (10, 12, 18)");
+        let third = prompt ("10^2 = ? (100, 121, 169)");
+        let i = 0;
+       
+        if (first == 4){
+           i += 2;
+        }else i += 0;
+        
+        if (second == 12){
+            i +=2;
+        } else i += 0;
+         if (third == 100){
+             i += 2;
+         }else i += 0;
+        alert(i + " ballov");
         
         
         //task 10
@@ -229,29 +229,9 @@
                         day += 1;
                         alert(day + "." + month + "." + year);
                     }
-                }
-                
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+                }  
+        }   
     </script>
-    
-    
-    
-    
-    
-    
 </head>
 <body>
     
