@@ -1,0 +1,33 @@
+#table td {
+
+    padding: 10px;
+
+    border: 1px solid black;
+}
+
+#pagination {
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+
+​​#pagination {
+
+    display: flex;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+#pagination li {
+    margin-right: 5px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#pagination li:hover, #pagination li:active {
+    cursor: pointer;
+    color: red;
+    border: 1px solid black;
+}
